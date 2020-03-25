@@ -1,0 +1,58 @@
+Semana Omnistack (23/03/2020)
+- Desenvolvimento Web: Obrigatório o conhecimento de JavaScript
+
+Conceitos Básicos
+- Notion: Anotacões online
+- Aplicacão "Be the Hero": Conectar pessoas que gostam de ajudar e unir a ONG`s
+
+Back-End (coracão da aplicacão)
+- Tudo aquilo que o usuário não vê
+  - Regras de negócio;
+  - Conexão BD;
+  - Comunic. webservice;
+  - Autenticacão dos usuários (email e senha)
+  - Criptografica e seguranca
+- Comunicacão entre as plataformas em JSON (Estrutura de comunicacão de dados)
+
+Front-End
+- Tudo o que o usuário vê, tanto na Web como também Mobile
+
+Entendendo o React
+
+Abordagem Tradicional
+Requisicão -> BackEnd recebe e envia a página inteira -> Resposta HTML
+
+Abordarem SPA (Single Page Aplication)
+Requisicão -> BackEnd recebe e envia um JSON com os dados -> Resposta JSON: somente um array
+Tudo controlado pelo React que está no FrontEnd, principalmente as rotas
+
+Entendendo o React-Native
+
+Abordagem Tradicional
+ Cria-se aplicacões de acordo com as plataformas que for disponibilizada, sendo o trabalho repetitivo
+ Na hora de prestar suporte ou correcões, deve-se fazer em todas as plataformas
+
+Abordagem React-Native
+ Desenvolve-se somente uma aplicacão, onde a mesma pode ser "convertido" para as plataformas que quer,
+facilitando na hora de prestar suporte e correcões
+ Somente uma linguagem para se programar
+
+Por que usararemos o Expo?
+ Framework para o React-Native, conjunto de ferramentas para se utilizar as funcionalidades do celular
+ Só nós preocupamos em desenvolver um código com o React e React-Native, enviando somente JavaScript,
+enquanto isso o Expo faz todo o controle das conversões para o Android e IOS
+
+Semana Omnistack (24/03/2020)
+Criacão do Back-End:
+
+
+
+Semana Omnistack (25/03/2020)
+
+Conceitos do React
+ Compomente é uma funcão que retorna HTML, pode-se ter funcionalidades JS, CSS
+ JSX - Quando o HTML está integrado dentro do JavaScript
+ Propriedades - informacoes e/ou dados a serem passados para ser integrado no HTML
+ Estado - Informacão mantida pelo componente
+ Imutabilidade - Por questão de performance, nunca pode-se alterar um valor de estado de forma direta
+sendo necessário sobrepor o mesmo
