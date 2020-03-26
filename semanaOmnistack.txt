@@ -56,3 +56,16 @@ Conceitos do React
  Estado - Informacão mantida pelo componente
  Imutabilidade - Por questão de performance, nunca pode-se alterar um valor de estado de forma direta
 sendo necessário sobrepor o mesmo
+
+Semana Omnistack (26/03/2020)
+Reactive Native
+- Semântica (Não há deferencas como em HTML
+// <View> </View> -> div, header, footer, aside, section
+// <Text> </Text> -> p, h1, h2, etc
+- Estilizacão
+// Já possui flexbox imbutido, não necessitando colocar
+// Estilizacão própria para cada elemento (individualmente)
+
+"Expo" -> Faz todo o desenvolvimento Mobile da aplicacão, vendo os testes em tempo real
+  |-> Routing and Navigation -> Auxilia na navegacão das páginas do app
+"Axios" -> Responsável por fazer as chamadas API e trazer as respostas do backend
