@@ -25,11 +25,7 @@ routes.post("/ongs", celebrate({
     })
 }), OngController.create);
 
-routes.get("/incedents", celebrate({
-    [Segments.QUERY]: Joi.object().keys({
-        page: Joi.number()
-    })
-}), IncidentsController.index);
+routes.get("/incedents", IncidentsController.index);
 
 routes.post("/incedents", celebrate({
     [Segments.HEADERS]: Joi.object({

@@ -70,7 +70,6 @@ export default function NewIncidente() {
                         onChange={e => setValue(e.target.value)}
                     />
 
-                    <button className='button' type='submit'> Cancelar</button>
                     <button className='button' type='submit'> Cadastrar</button>
                 </form>
             </div>
