@@ -69,3 +69,70 @@ Reactive Native
 "Expo" -> Faz todo o desenvolvimento Mobile da aplicacão, vendo os testes em tempo real
   |-> Routing and Navigation -> Auxilia na navegacão das páginas do app
 "Axios" -> Responsável por fazer as chamadas API e trazer as respostas do backend
+
+
+Semana Omnistack (27/03/2020)
+"Celebrate" -> Biblioteca para fazer validacões. Faz a integracão do 'joi' (criado pela hapi) com o express
+	Validacão do BODY
+		routes.post("/ongs", celebrate({
+    			[Segments.BODY]: Joi.object().keys({
+        			name: Joi.string().required(),
+        			email: Joi.string().required().email(),
+        			whatsapp: Joi.number().required().min(10).max(11),
+        			city: Joi.string().required(),
+        			uf: Joi.string().required().length(2),
+    			})
+		}), OngController.create);
+
+	Validacão do HEADERS
+		routes.get("/profile", celebrate({
+    			[Segments.HEADERS]: Joi.object({
+        			authorization: Joi.string().required(),
+    			}).unknown()
+		}), ProfileController.index);
+
+	Validacão do Query
+		routes.get("/incedents", celebrate({
+    			[Segments.QUERY]: Joi.object().keys({
+        			page: Joi.number()
+    			})
+		}), IncidentsController.index);
+
+Por quê fazer testes?
+	Sempre necessita de testes, porém a forma manual só funciona quando se tem poucas páginas,
+em aplicacões com mais de 1000 páginas, já se torna inviável (até menos que isso).
+
+TDD (Test-driven Development)
+	Auxilia na execucão de testes (Buscar mais informacões depois)
+
+"Jest" (npm i jest) -> Vai realizar os testes junto a sua app
+	integration -> Realiza o teste na rota/funcionalidade inteira da nossa aplicacão
+	
+
+	unit -> Realiza o teste expecífico de uma funcionalidade (não tendo conexão com nada mais)
+		describe('Generate Unique Id', () => {
+    			it('should generate an unique ID', () => {
+        		expect(2 + 2).toBe(5);
+    			})
+		});
+
+
+"Cross-env" (npm i cross-env) -> 
+"Super-Test" (npm i supertest) -> Faz as comunicacões HTTP, como também trás mais algumas validacões a mais
+	Para Headers
+		.set('Authorization','id válido')
+
+Deploy -> Onde irá hospedar sua app?
+	BackEnd
+1	Somente para testar com amiguinhos (heroku.com - node), video na rockseat
+2	App pequenas, mas comerciais (digitalocean.com - node), video na rockseat
+3	App maiores, necessário uma pessoa específica (AWS / Google Cloud Platform / Microsoft )
+
+	FrontEnd
+1	netlify
+2	netlify
+
+Estudos daqui pra frente
+	Padrões de código: ESLint, Prettier
+	Autenticacão JWT
+	Styled Components
